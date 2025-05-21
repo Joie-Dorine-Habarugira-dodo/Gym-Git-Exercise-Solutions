@@ -2,7 +2,7 @@
 
 ## Bundle 1
 
-## Exercise 1
+### Exercise 1
 
 ```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (master)
@@ -202,5 +202,153 @@ hp@Dorine MINGW64 /c/users/hp/git-exercises (dev)
 $ git push origin --delete test
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  - [deleted]         test
-```bash
+```
 
+### Exercise 2
+```bash
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git add home.html
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash list
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash
+Saved working directory and index state WIP on dev: 8e539de added README file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ touch about.html
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git add about.html
+
+hp@Dorine MINGW64 ~/git-exercises (dev)
+$ git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+
+hp@Dorine MINGW64 ~/git-exercises (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8e539de added README file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash list
+stash@{0}: WIP on dev: 8e539de added README file
+stash@{1}: WIP on dev: 8e539de added README file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ touch team.html
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git add team.html
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash
+Saved working directory and index state WIP on dev: 8e539de added README file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash list
+stash@{0}: WIP on dev: 8e539de added README file
+stash@{1}: WIP on dev: 8e539de added README file
+stash@{2}: WIP on dev: 8e539de added README file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (87dc6e98885fe944e5c294857cdc206555e3112b)
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash list
+stash@{0}: WIP on dev: 8e539de added README file
+stash@{1}: WIP on dev: 8e539de added README file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (00bde07de7cf4e9a340715d091acdd7a1a4ee004)
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash list
+stash@{0}: WIP on dev: 8e539de added README file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git commit -m "restored about and home file"
+[dev 5f1e1ec] restored about and home file
+ 2 files changed, 22 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git push
+fatal: The current branch dev has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev        
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git push origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (4/4), done.        
+Writing objects: 100% (4/4), 614 bytes | 614.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.   
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+   8e539de..5f1e1ec  dev -> dev
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash list
+stash@{0}: WIP on dev: 8e539de added README file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git stash pop stash@{0}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (146886f099f2908daa4ad109fd1d97e1358d4a07)
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git reset --hard
+HEAD is now at 5f1e1ec restored about and home file
+
+hp@Dorine MINGW64 ~/git-exercises (dev)       
+$ git status
+On branch dev
+nothing to commit, working tree clean
+```
