@@ -675,4 +675,265 @@ To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
    22b2544..5be0044  ft/service-redesign -> ft/service-redesign
 ```
 
+## Bundle 3
+
+### Exercise 1
+
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
+$ touch team.html
+
+hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
+$ git add team.html
+
+hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
+$ git commit -m "added a paragraph to the team page"
+[ft/team-page 3d9b384] added a paragraph to the team page
+ 1 file changed, 6 insertions(+)
+
+hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (3/3), done.        
+Writing objects: 100% (3/3), 1.07 KiB | 1.07 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'. 
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git chekcout -b ft/contact-page
+git: 'chekcout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
+$ git log
+commit 3d9b384f2f1b6cda3dd3b3464e7ce3cb84c86593 (HEAD -> ft/team-page, origin/ft/team-page) 
+Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
+Date:   Thu May 22 11:24:59 2025 +0200        
+
+    added a paragraph to the team page        
+
+commit dfeddc543372604e2caa0058e23af233a09cc7d1 (origin/ft/service-redesign, ft/service-redesign)
+Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
+Date:   Thu May 22 11:19:08 2025 +0200        
+
+    updated README file
+
+commit 5be004414d47acd9bbc2b3b2b428a35661422120
+Merge: 22b2544 278a7c9
+Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
+Date:   Thu May 22 11:13:42 2025 +0200        
+
+    merged to main
+
+commit 278a7c9b9c434f6b293092046ec30d714caddf2e (origin/main, main, ft/contact-page)        
+Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
+Date:   Thu May 22 10:02:27 2025 +0200        
+
+    retrieving files
+
+commit 22b2544d30e87add0795e0f6c02d53d5ea93c73f
+Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
+Date:   Thu May 22 09:58:06 2025 +0200        
+
+    added changes to the service page
+
+commit 7afc28b02f8459cb3c889d38f2f272463e8bf262
+Merge: 40c8358 7132d41
+Author: Joie-Dorine-Habarugira-dodo <hjoydoreen08@gmail.com>
+Date:   Wed May 21 12:09:22 2025 +0200        
+
+    Merge pull request #3 from Joie-Dorine-Habarugira-dodo/revert-2-ft/bundle-2
+
+    Revert "Added a service page for the project"
+
+commit 7132d412ebb96b89db2372cf616f72d9b9dcb92a (origin/revert-2-ft/bundle-2)
+Author: Joie-Dorine-Habarugira-dodo <hjoydoreen08@gmail.com>
+Date:   Wed May 21 12:08:45 2025 +0200        
+
+    Revert "Added a service page for the project"
+
+commit 40c835819d59224ec07b535bda9537ec3adea73d
+Merge: 026a696 6e0fb8c
+Author: Joie-Dorine-Habarugira-dodo <hjoydoreen08@gmail.com>
+Date:   Wed May 21 12:00:00 2025 +0200        
+
+    Merge pull request #2 from Joie-Dorine-Habarugira-dodo/ft/bundle-2
+
+    Added a service page for the project      
+
+commit 6e0fb8c8a69d87ae2ddb77332bb6cf0d22d7a204 (origin/ft/bundle-2)
+Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
+Date:   Wed May 21 11:31:11 2025 +0200        
+
+    created a services file
+
+commit 62a21afd24d45b900e1096b60216f55a7f7d2d01 (origin/dev, dev)
+Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
+Date:   Wed May 21 10:55:21 2025 +0200        
+
+    finished exercise 2
+:
+e.habarugira22a@kepler.org>
+Date:   Wed May 21 11:31:11 2025 +0200        
+
+    created a services file
+
+commit 62a21afd24d45b900e1096b60216f55a7f7d2d01 (origin/dev, dev)
+Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
+Date:   Wed May 21 10:55:21 2025 +0200        
+
+    finished exercise 2
+
+hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
+$ git cherry-pick 3d9b384f2f1b6cda3dd3b3464e7ce3cb84c86593
+[ft/contact-page 8ae5eb1] added a paragraph to the team page
+ Date: Thu May 22 11:24:59 2025 +0200
+ 1 file changed, 6 insertions(+)
+
+hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
+$ touch contact.html
+
+hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
+$ git commit -m "feat: add contact page"
+[ft/contact-page f3d501d] feat: add contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
+$ git push origin ft/contact-page
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (6/6), done.        
+Writing objects: 100% (6/6), 1.52 KiB | 389.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ touch faq.html
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ git commit -m "feat: add faq page"
+[ft/faq-page 123f5bd] feat: add faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (3/3), done.        
+Writing objects: 100% (3/3), 474 bytes | 118.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+new/ft/faq-page
+remote:
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ git revert 3d9b384f2f1b6cda3dd3b3464e7ce3cb84c86593
+hint: Waiting for your editor to close the file...
+[ft/faq-page 764cc58] Revert "added a paragraph to the team page"
+ 1 file changed, 6 deletions(-)
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ 
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ git commit -m "reverted the changes"
+[ft/faq-page dc5dd06] reverted the changes
+ 1 file changed, 275 insertions(+), 1 deletion(-)
+
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 2.34 KiB | 799.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+   123f5bd..dc5dd06  ft/faq-page -> ft/faq-page
+   ```
+
+   
+
 
