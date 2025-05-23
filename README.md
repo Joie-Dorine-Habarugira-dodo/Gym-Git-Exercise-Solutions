@@ -1275,4 +1275,105 @@ To https://github.com/Joie-Dorine-Habarugira-dodo/git-copy.git
  * [new branch]      main -> main
 ```
 
+### Exercise 2
+
+#### Checkout a new branch named ft/footer
+```bash
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+```
+#### Committing new changes in the branch
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/footer) 
+$ git add footer.html
+
+hp@Dorine MINGW64 ~/git-exercises (ft/footer) 
+$ git commit -m "feat: add footer file"
+[ft/footer 578b19d] feat: add footer file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 footer.html
+```
+#### Creating a second commit
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/footer) 
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (ft/footer) 
+$ git commit -m "feat: add footer content"
+[ft/footer bec7cf1] feat: add footer content
+ 1 file changed, 8 insertions(+)
+```
+#### Pushing and creating a new PR for the branch
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/footer) 
+$ git push origin ft/footer
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (3/3), done.        
+Writing objects: 100% (3/3), 366 bytes | 366.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+   578b19d..bec7cf1  ft/footer -> ft/footer   
+```
+#### Checking out the main branch again 
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/footer) 
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'. 
+```
+#### Creating a new branch named ft/squashing
+```bash
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+```
+#### Squashing the changes on the ft/footer branch
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/squashing)
+$ git merge --squash ft/footer
+Updating 0d9a337..bec7cf1
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 footer.html
+```
+#### Committing the changes with a different commit message
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 4256b50] footer changes squashing
+ 1 file changed, 8 insertions(+)
+ create mode 100644 footer.html
+```
+#### Pushing the changes and creating a PR
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (3/3), done.        
+Writing objects: 100% (3/3), 378 bytes | 378.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
    
