@@ -1110,6 +1110,233 @@ To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
    123f5bd..dc5dd06  ft/faq-page -> ft/faq-page
 ```
 
+### Exercise 2
+
+#### Creating a new branch from the ft/faq-page branch named ft/home-page-redesign
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
+$ git checkout -b ft/home-page-redesign       
+Switched to a new branch 'ft/home-page-redesign'
+```
+#### Going back to the main branch, making some changes there, committing, and pushing them
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'. 
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git commit -m "added some changes on the README file"
+[main 5cf3b1f] added some changes on the README file
+ 1 file changed, 607 insertions(+), 19 deletions(-)
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (3/3), done.        
+Writing objects: 100% (3/3), 6.16 KiB | 6.16 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+   278a7c9..5cf3b1f  main -> main
+```
+#### Going back to the ft/home-page-redesign branch
+```bash
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+```
+#### Rebasing the branch to main
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git rebase main
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply dc5dd06... reverted the changes
+n "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+n "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply dc5dd06... reverted the changes
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+n "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply dc5dd06... reverted the changes
+
+n "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply dc5dd06... reverted the changes
+n "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply dc5dd06... reverted the changes
+Could not apply dc5dd06... reverted the changes
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+
+
+
+
+
+
+
+
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+
+
+
+
+
+
+
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+
+
+
+
+
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+
+
+
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+
+
+
+
+
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+
+
+
+
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+hp@Dorine MINGW64 ~/git-exercises (ft/home-paghp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign|REBASE 5/7)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+#### Adding changes to the home page and committing push them
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git commit -m "added a paragraph on the home page"
+[ft/home-page-redesign d8ba384] added a paragraph on the home page
+ 1 file changed, 10 insertions(+)
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+hp@Dorine MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (17/17), done.      
+Writing objects: 100% (17/17), 4.02 KiB | 1.34 MiB/s, done.
+Total 17 (delta 9), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (9/9), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
+
    
 
 
