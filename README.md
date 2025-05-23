@@ -4,14 +4,19 @@
 
 ### Exercise 1
 
+#### Creating a project folder & initializing git
 ```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (master)
 $ git init
 Reinitialized existing Git repository in C:/Users/hp/git-exercises/.git/
-
+```
+#### Renaming main branch from master to main
+```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (master)
 $ git branch -M main
-
+```
+#### Staging changes and committing them
+```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (main)
 $ git add .
 
@@ -20,7 +25,9 @@ $ git commit -m "added files"
 [main (root-commit) 026a696] added files
  1 file changed, 18 insertions(+)
  create mode 100644 index.html
-
+```
+#### (This was an error!)
+```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (main)
 $ git remote add origin git@github.com:Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
 
@@ -79,10 +86,14 @@ origin
 
 hp@Dorine MINGW64 /c/users/hp/git-exercises (main)
 $ git remote rm origin
-
+```
+#### Create a Github repo and connect it with the project
+```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (main)
 $ git remote add origin https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
-
+```
+#### Pushing the changes to GitHub
+```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (main)
 $ git push origin main
 Enumerating objects: 3, done.
@@ -93,7 +104,9 @@ Writing objects: 100% (3/3), 535 bytes | 178.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  * [new branch]      main -> main
-
+```
+#### Creating a new branch dev
+```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (main)
 $ git branch -b dev
 error: unknown switch `b'
@@ -169,7 +182,9 @@ remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Sol
 remote:
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  * [new branch]      dev -> dev
-
+```
+####  Creating another branch test from dev
+```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (dev)
 $ git checkout -b test
 Switched to a new branch 'test'
@@ -183,7 +198,9 @@ remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Sol
 remote:
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  * [new branch]      test -> test
-
+```
+#### Going back to the dev branch and deleting the test branch
+```bash
 hp@Dorine MINGW64 /c/users/hp/git-exercises (test)
 $ git checkout dev
 Switched to branch 'dev'
@@ -205,17 +222,23 @@ To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
 ```
 
 ### Exercise 2
+
+#### Creating a new home.html file, adding some html changes and saving them
 ```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git add home.html
-
+```
+#### Stash saving current changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git stash list
 
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git stash
 Saved working directory and index state WIP on dev: 8e539de added README file
-
+```
+#### Repeating the same process for a new about.html page and stash saving changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ touch about.html
 
@@ -238,7 +261,9 @@ hp@Dorine MINGW64 ~/git-exercises (dev)
 $ git stash list
 stash@{0}: WIP on dev: 8e539de added README file
 stash@{1}: WIP on dev: 8e539de added README file
-
+```
+#### Repeating the same process for a new team.html page and stash saving changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ touch team.html
 
@@ -262,7 +287,9 @@ $ git stash list
 stash@{0}: WIP on dev: 8e539de added README file
 stash@{1}: WIP on dev: 8e539de added README file
 stash@{2}: WIP on dev: 8e539de added README file
-
+```
+#### Restore the changes of the about.html page
+```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git stash pop stash@{1}
 On branch dev
@@ -276,7 +303,9 @@ hp@Dorine MINGW64 ~/git-exercises (dev)
 $ git stash list
 stash@{0}: WIP on dev: 8e539de added README file
 stash@{1}: WIP on dev: 8e539de added README file
-
+```
+#### Using stash pop bring back the home.html page changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git stash pop stash@{1}
 On branch dev
@@ -290,7 +319,9 @@ Dropped stash@{1} (00bde07de7cf4e9a340715d091acdd7a1a4ee004)
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git stash list
 stash@{0}: WIP on dev: 8e539de added README file
-
+```
+#### Committing the current changes and pushing them
+```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git status
 On branch dev
@@ -329,7 +360,9 @@ Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (1/1), done.   
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
    8e539de..5f1e1ec  dev -> dev
-
+```
+#### Using stash pop restore the changes of the team.html page index
+```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git stash list
 stash@{0}: WIP on dev: 8e539de added README file
@@ -342,7 +375,9 @@ Changes to be committed:
         new file:   team.html
 
 Dropped stash@{0} (146886f099f2908daa4ad109fd1d97e1358d4a07)
-
+```
+#### Reset the current changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git reset --hard
 HEAD is now at 5f1e1ec restored about and home file
@@ -357,14 +392,19 @@ nothing to commit, working tree clean
 
 ### Exercise 1
 
+#### Creating a new branch named ft/bundle-2
 ```bash
 hp@Dorine MINGW64 ~/git-exercises (dev)       
 $ git checkout -b ft/bundle-2
 Switched to a new branch 'ft/bundle-2'
-
+```
+### Create a new page named services.html
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/bundle-2)
 $ touch services.html
-
+``` 
+#### Committing the changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/bundle-2)
 $ git add service.html
 fatal: pathspec 'service.html' did not match any files
@@ -404,12 +444,15 @@ To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
 ```
 
 ### Exercise 2
- 
+
+#### Checking out main branch
 ```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/bundle-2)
 $ git checkout main
 Switched to branch 'main'
-
+```
+#### Pulling the latest changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (main)      
 $ git pull
 remote: Enumerating objects: 1, done.
@@ -497,7 +540,9 @@ $ git branch
   dev
   ft/bundle-2
 * main
-
+```
+#### Looking for the last commit to recover the files lost
+```bash
 hp@Dorine MINGW64 ~/git-exercises (main)      
 $ git log --oneline --graph --all
 *   7afc28b (HEAD -> main, origin/main) Merge pull request #3 from Joie-Dorine-Habarugira-dodo/revert-2-ft/bundle-2
@@ -565,11 +610,15 @@ $ git checkout 249fd5c -- .
 
 hp@Dorine MINGW64 ~/git-exercises (main)      
 $ git add .
-
+```
+#### Creating a new branch named ft/service-redesign
+```bash
 hp@Dorine MINGW64 ~/git-exercises (main)      
 $ git checkout -b ft/service-redesign
 Switched to a new branch 'ft/service-redesign'
-
+```
+#### Adding new changes to the service.html, committing, and pushing them
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
 $ git add .
 
@@ -597,7 +646,9 @@ remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Sol
 remote:
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/service-redesign -> ft/service-redesign
-
+```
+#### Going back to the main branch and adding new changes to the service.html page, committing and pushing those changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
 $ git checkout main
 Switched to branch 'main'
@@ -638,11 +689,15 @@ remote: Resolving deltas: 100% (3/3), done.
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
    7afc28b..278a7c9  main -> main
 branch 'main' set up to track 'origin/main'.  
-
+```
+#### Checking out the ft/service-redesignbranch
+```bash
 hp@Dorine MINGW64 ~/git-exercises (main)      
 $ git checkout ft/service-redesign
 Switched to branch 'ft/service-redesign'
-
+```
+#### Merging the main branch with ft/service-redesign branch, committing, and pushing the changes again
+```bash
 $ git merge main
 Auto-merging about.html
 $ git merge main
@@ -679,14 +734,19 @@ To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
 
 ### Exercise 1
 
+#### Creating a new branch
 ```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
 $ git checkout -b ft/team-page
 Switched to a new branch 'ft/team-page'
-
+```
+#### Creating a team.html
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
 $ touch team.html
-
+```
+#### Committing an pushing changes
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
 $ git add team.html
 
@@ -710,12 +770,16 @@ remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Sol
 remote:
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/team-page -> ft/team-page
-
+```
+#### cChecking out the main branch
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
 $ git checkout main
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'. 
-
+```
+#### Creating a new branch ft/contact-page
+```bash
 hp@Dorine MINGW64 ~/git-exercises (main)      
 $ git chekcout -b ft/contact-page
 git: 'chekcout' is not a git command. See 'git --help'.
@@ -726,11 +790,15 @@ The most similar command is
 hp@Dorine MINGW64 ~/git-exercises (main)      
 $ git checkout -b ft/contact-page
 Switched to a new branch 'ft/contact-page'
-
+```
+#### Going back to the dt/team-page branch
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
 $ git checkout ft/team-page
 Switched to branch 'ft/team-page'
-
+```
+#### Looking for the last commit
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
 $ git log
 commit 3d9b384f2f1b6cda3dd3b3464e7ce3cb84c86593 (HEAD -> ft/team-page, origin/ft/team-page) 
@@ -810,17 +878,23 @@ Author: Joie-Dorine-Habarugira-dodo <joiedorine.habarugira22a@kepler.org>
 Date:   Wed May 21 10:55:21 2025 +0200        
 
     finished exercise 2
-
+```
+#### Checking out ft/contact-page
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/team-page)
 $ git checkout ft/contact-page
 Switched to branch 'ft/contact-page'
-
+```
+#### Using git cherry-pick get the changes from the last commit on the ft/team-page branch
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
 $ git cherry-pick 3d9b384f2f1b6cda3dd3b3464e7ce3cb84c86593
 [ft/contact-page 8ae5eb1] added a paragraph to the team page
  Date: Thu May 22 11:24:59 2025 +0200
  1 file changed, 6 insertions(+)
-
+```
+#### Adding new changes for the contact page, committing, and pushing them
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
 $ touch contact.html
 
@@ -848,11 +922,15 @@ remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Sol
 remote:
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/contact-page -> ft/contact-page
-
+```
+#### Creating a new branch called ft/faq-page from the ft/contact-page branch 
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/contact-page)
 $ git checkout -b ft/faq-page
 Switched to a new branch 'ft/faq-page'
-
+```
+#### Creating a new faq.html, adding some changes, committing, and pushing those changes.
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
 $ touch faq.html
 
@@ -879,40 +957,17 @@ new/ft/faq-page
 remote:
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/faq-page -> ft/faq-page
-
+```
+#### Reverting the changes of the last commit of the ft/team-page branch
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
 $ git revert 3d9b384f2f1b6cda3dd3b3464e7ce3cb84c86593
 hint: Waiting for your editor to close the file...
 [ft/faq-page 764cc58] Revert "added a paragraph to the team page"
  1 file changed, 6 deletions(-)
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$ 
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$
-
-hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
-$
-
+```
+#### Pushing the changes and create a new PR
+```bash
 hp@Dorine MINGW64 ~/git-exercises (ft/faq-page)
 $ git add .
 
@@ -932,7 +987,7 @@ Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
    123f5bd..dc5dd06  ft/faq-page -> ft/faq-page
-   ```
+```
 
    
 
