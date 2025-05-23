@@ -402,3 +402,277 @@ remote:
 To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 ```
+
+### Exercise 2
+ 
+```bash
+hp@Dorine MINGW64 ~/git-exercises (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.   
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 922 bytes | 153.00 KiB/s, done.
+From https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions
+   026a696..40c8358  main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+hp@Dorine MINGW64 ~/git-exercises (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 1 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.80 KiB | 367.00 KiB/s, done.
+From https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions
+   40c8358..7afc28b  main                 -> origin/main
+ * [new branch]      revert-2-ft/bundle-2 -> origin/revert-2-ft/bundle-2
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+hp@Dorine MINGW64 ~/git-exercises (main)
+$ $ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 922 bytes | 153.00 KiB/s, done.
+From https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions
+   026a696..40c8358  main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+    git branch --set-upstream-to=origin/<branch> mainch you can do so with:
+bash: $: command not found
+bash: remote:: command not found
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: From: command not found
+bash: origin/main: No such file or directory
+bash: There: command not found
+bash: Please: command not found
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `<'
+bash: If: command not found
+bash: branch: No such file or directory       
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git pull origin main
+From https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD 
+Updating 026a696..7afc28b
+Fast-forward
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git pull origin ft/bundle-2
+From https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions
+ * branch            ft/bundle-2 -> FETCH_HEAD
+Already up to date.
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git branch
+  dev
+  ft/bundle-2
+* main
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git log --oneline --graph --all
+*   7afc28b (HEAD -> main, origin/main) Merge pull request #3 from Joie-Dorine-Habarugira-dodo/revert-2-ft/bundle-2
+|\  
+| * 7132d41 (origin/revert-2-ft/bundle-2) Revert "Added a service page for the project"     
+|/  
+*   40c8358 Merge pull request #2 from Joie-Dorine-Habarugira-dodo/ft/bundle-2
+|\
+| | * 249fd5c (ft/bundle-2) Updated the README file
+| |/
+| * 6e0fb8c (origin/ft/bundle-2) created a services file
+| * 62a21af (origin/dev, dev) finished exercise 2
+| * 5f1e1ec restored about and home file      
+| * 8e539de added README file
+|/
+* 026a696 added files
+(END)
+|\
+| | * 249fd5c (ft/bundle-2) Updated the README file
+| |/
+| * 6e0fb8c (origin/ft/bundle-2) created a services file
+| * 62a21af (origin/dev, dev) finished exercise 2
+| * 5f1e1ec restored about and home file      
+| * 8e539de added README file
+|/
+* 026a696 added files
+(END)
+*   7afc28b (HEAD -> main, origin/main) Merge pull request #3 from Joie-Dorine-Habarugira-dodo/revert-2-ft/bundle-2
+|\
+| * 7132d41 (origin/revert-2-ft/bundle-2) Revert "Added a service page for the project"     
+|/
+*   40c8358 Merge pull request #2 from Joie-Dorine-Habarugira-dodo/ft/bundle-2
+*   7afc28b (HEAD -> main, origin/main) Merge pull request #3 from Joie-Dorine-Habarugira-dodo/revert-2-ft/bundle-2
+|\
+| * 7132d41 (origin/revert-2-ft/bundle-2) Revert "Added a service page for the project"     
+|/
+*   40c8358 Merge pull request #2 from Joie-Dorine-Habarugira-dodo/ft/bundle-2
+*   7afc28b (HEAD -> main, origin/main) Merge pull request #3 from Joie-Dorine-Habarugira-dodo/revert-2-ft/bundle-2
+|\
+| * 7132d41 (origin/revert-2-ft/bundle-2) Revert "Added a service page for the project"     
+|/
+*   40c8358 Merge pull request #2 from Joie-Dorine-Habarugira-dodo/ft/bundle-2
+|\
+| | * 249fd5c (ft/bundle-2) Updated the README file
+| |/
+| * 6e0fb8c (origin/ft/bundle-2) created a services file
+| * 62a21af (origin/dev, dev) finished exercise 2
+| * 5f1e1ec restored about and home file      
+| * 8e539de added README file
+|/
+* 026a696 added files
+(END)
+|\
+| | * 249fd5c (ft/bundle-2) Updated the README file
+| |/
+| * 6e0fb8c (origin/ft/bundle-2) created a services file
+| * 62a21af (origin/dev, dev) finished exercise 2
+| * 5f1e1ec restored about and home file      
+| * 8e539de added README file
+|/
+* 026a696 added files
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git checkout 249fd5c -- .
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
+$ git commit -m "added changes to the service page"
+[ft/service-redesign 22b2544] added changes to the service page
+ 4 files changed, 438 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (6/6), done.        
+Writing objects: 100% (6/6), 3.83 KiB | 784.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.   
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git commit -m "retrieving files"
+[main 278a7c9] retrieving files
+ 5 files changed, 448 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+ create mode 100644 team.html
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main       
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git push --set-upstream origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (7/7), done.        
+Writing objects: 100% (7/7), 3.64 KiB | 466.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.   
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+   7afc28b..278a7c9  main -> main
+branch 'main' set up to track 'origin/main'.  
+
+hp@Dorine MINGW64 ~/git-exercises (main)      
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+$ git merge main
+Auto-merging about.html
+$ git merge main
+Auto-merging about.html
+$ git merge main
+Auto-merging about.html
+CONFLICT (add/add): Merge conflict in about.html
+Auto-merging services.html
+Auto-merging services.html
+CONFLICT (add/add): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign|MERGING)
+$ git add .
+
+hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign|MERGING)
+$ git commit -m "merged to main"
+[ft/service-redesign 5be0044] merged to main
+
+hp@Dorine MINGW64 ~/git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads      
+Compressing objects: 100% (3/3), done.        
+Writing objects: 100% (3/3), 350 bytes | 175.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Joie-Dorine-Habarugira-dodo/Gym-Git-Exercise-Solutions.git
+   22b2544..5be0044  ft/service-redesign -> ft/service-redesign
+```
+
+
